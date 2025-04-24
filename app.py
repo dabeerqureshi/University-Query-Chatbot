@@ -16,6 +16,8 @@ st.set_page_config(
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
+UNIVERSITY_URL = "https://nust.edu.pk/"
+
 def initialize_chatbot():
     if "chatbot" not in st.session_state:
         if os.path.exists("data/university_info.pdf"):
@@ -79,7 +81,7 @@ def get_intent(prompt):
 
 def handle_intent(intent, prompt):
     responses = {
-        "course": "You can find detailed course info in the academic section of the portal or ask about a specific course https://nust.edu.pk/.",
+        "course": "You can find detailed course info in the academic section of the portal or ask about a specific course.",
         "faculty": "Faculty contacts are listed in the university directory or departmental pages.",
         "calendar": "The academic calendar is available on the university website under Academic > Calendar.",
         "exam": "Exam schedules are usually posted on the portal. Please log in to check yours.",
@@ -104,7 +106,8 @@ def handle_intent(intent, prompt):
         "multilingual": "Multilingual support is enabled. You can chat in English or Urdu!",
         "personalized": "Personalized responses will be enabled once you’re logged into the student portal.",
     }
-    return responses.get(intent, "Let me check on that for you...")
+    response = responses.get(intent, "Let me check on that for you...")
+    return response + f" For more info, visit: {UNIVERSITY_URL}"
 
 def translate_prompt(prompt, target_lang="en"):
     translator = Translator()
