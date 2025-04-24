@@ -79,7 +79,7 @@ def get_intent(prompt):
 
 def handle_intent(intent, prompt):
     responses = {
-        "course": "You can find detailed course info in the academic section of the portal or ask about a specific course.",
+        "course": "You can find detailed course info in the academic section of the portal or ask about a specific course https://nust.edu.pk/.",
         "faculty": "Faculty contacts are listed in the university directory or departmental pages.",
         "calendar": "The academic calendar is available on the university website under Academic > Calendar.",
         "exam": "Exam schedules are usually posted on the portal. Please log in to check yours.",
