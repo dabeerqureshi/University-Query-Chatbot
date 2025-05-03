@@ -53,5 +53,5 @@ A smart, efficient chatbot designed to answer university-related questions using
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/your-username/University-Query-Chatbot.git
+   git clone https://github.com/dabeerqureshi/University-Query-Chatbot.git
    cd University-Query-Chatbot
